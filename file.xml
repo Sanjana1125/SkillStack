@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skillstack xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="file.xsd">
+
+  <courses>
+
+    <course id="C001">
+      <title>Python for Data Science and ML</title>
+      <category>Programming</category>
+      <instructor>Dr. Priya Sharma</instructor>
+      <price currency="INR">999</price>
+      <rating>4.9</rating>
+      <reviews>1200</reviews>
+      <duration_hours>42</duration_hours>
+      <description>Master Python and apply it to data science, visualization, and machine learning projects.</description>
+    </course>
+
+    <course id="C002">
+      <title>Full Stack Web Development</title>
+      <category>Web Development</category>
+      <instructor>Rahul Mehta</instructor>
+      <price currency="INR">1299</price>
+      <rating>4.8</rating>
+      <reviews>980</reviews>
+      <duration_hours>60</duration_hours>
+      <description>Build complete web applications using HTML, CSS, JavaScript, React, and Node.js.</description>
+    </course>
+
+    <course id="C003">
+      <title>Machine Learning A-Z</title>
+      <category>AI and ML</category>
+      <instructor>Ananya Reddy</instructor>
+      <price currency="INR">1499</price>
+      <rating>4.7</rating>
+      <reviews>750</reviews>
+      <duration_hours>55</duration_hours>
+      <description>Comprehensive machine learning course covering supervised, unsupervised, and reinforcement learning.</description>
+    </course>
+
+    <course id="C004">
+      <title>Data Analytics with Power BI</title>
+      <category>Data Science</category>
+      <instructor>Kiran Babu</instructor>
+      <price currency="INR">1199</price>
+      <rating>4.9</rating>
+      <reviews>620</reviews>
+      <duration_hours>30</duration_hours>
+      <description>Build interactive dashboards and reports using Microsoft Power BI for business intelligence.</description>
+    </course>
+
+    <course id="C005">
+      <title>UI/UX Design with Figma</title>
+      <category>Design</category>
+      <instructor>Meera Nair</instructor>
+      <price currency="INR">899</price>
+      <rating>4.6</rating>
+      <reviews>430</reviews>
+      <duration_hours>25</duration_hours>
+      <description>Design beautiful, user-centric interfaces using Figma from wireframes to high-fidelity prototypes.</description>
+    </course>
+
+    <course id="C006">
+      <title>React.js Zero to Pro</title>
+      <category>Web Development</category>
+      <instructor>Aditya Kumar</instructor>
+      <price currency="INR">1099</price>
+      <rating>4.8</rating>
+      <reviews>870</reviews>
+      <duration_hours>38</duration_hours>
+      <description>Master React.js including hooks, context API, Redux, and building production-ready applications.</description>
+    </course>
+
+    <course id="C007">
+      <title>Java and OOP Fundamentals</title>
+      <category>Programming</category>
+      <instructor>Suresh Iyer</instructor>
+      <price currency="INR">0</price>
+      <rating>4.5</rating>
+      <reviews>2100</reviews>
+      <duration_hours>20</duration_hours>
+      <description>Learn Java from scratch with a strong emphasis on object-oriented programming principles.</description>
+    </course>
+
+    <course id="C008">
+      <title>Deep Learning with TensorFlow</title>
+      <category>AI and ML</category>
+      <instructor>Dr. Lakshmi Ravi</instructor>
+      <price currency="INR">1799</price>
+      <rating>4.9</rating>
+      <reviews>540</reviews>
+      <duration_hours>50</duration_hours>
+      <description>Build neural networks and deep learning models using TensorFlow and Keras.</description>
+    </course>
+
+    <course id="C009">
+      <title>SQL and Database Design</title>
+      <category>Data Science</category>
+      <instructor>Vivek Patel</instructor>
+      <price currency="INR">0</price>
+      <rating>4.6</rating>
+      <reviews>1500</reviews>
+      <duration_hours>18</duration_hours>
+      <description>Learn SQL from beginner to advanced, including database design, joins, and stored procedures.</description>
+    </course>
+
+  </courses>
+
+</skillstack>

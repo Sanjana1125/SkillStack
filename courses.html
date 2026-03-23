@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - SkillStack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="icon"><h2 class="logo">SkillStack</h2></div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="page-banner">
+    <h1>Our <span>Courses</span></h1>
+    <p>Choose from 50+ expert-led courses to fast-track your career.</p>
+  </div>
+
+  <section style="padding: 30px 5% 0;">
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+      <button class="btn btn-primary" onclick="filterCourses('all')">All</button>
+      <button class="btn btn-outline" onclick="filterCourses('programming')">Programming</button>
+      <button class="btn btn-outline" onclick="filterCourses('web')">Web Dev</button>
+      <button class="btn btn-outline" onclick="filterCourses('ai')">AI &amp; ML</button>
+      <button class="btn btn-outline" onclick="filterCourses('data')">Data Science</button>
+      <button class="btn btn-outline" onclick="filterCourses('design')">Design</button>
+    </div>
+  </section>
+
+  <section id="courses-section">
+    <div class="courses-grid" id="coursesGrid">
+
+      <div class="course-card" data-cat="programming">
+        <div class="card-thumb">🐍</div>
+        <div class="card-body">
+          <div class="card-category">Programming</div>
+          <h3>Python for Data Science &amp; ML</h3>
+          <p class="card-instructor">👤 Dr. Priya Sharma</p>
+          <div class="card-meta">
+            <span class="card-price">₹999</span>
+            <span class="card-rating"><span class="stars">★★★★★</span> 4.9 (1.2k)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="web">
+        <div class="card-thumb">🌐</div>
+        <div class="card-body">
+          <div class="card-category">Web Development</div>
+          <h3>Full Stack Web Development</h3>
+          <p class="card-instructor">👤 Rahul Mehta</p>
+          <div class="card-meta">
+            <span class="card-price">₹1,299</span>
+            <span class="card-rating"><span class="stars">★★★★★</span> 4.8 (980)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="ai">
+        <div class="card-thumb">🤖</div>
+        <div class="card-body">
+          <div class="card-category">AI &amp; ML</div>
+          <h3>Machine Learning A–Z</h3>
+          <p class="card-instructor">👤 Ananya Reddy</p>
+          <div class="card-meta">
+            <span class="card-price">₹1,499</span>
+            <span class="card-rating"><span class="stars">★★★★☆</span> 4.7 (750)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="data">
+        <div class="card-thumb">📊</div>
+        <div class="card-body">
+          <div class="card-category">Data Science</div>
+          <h3>Data Analytics with Power BI</h3>
+          <p class="card-instructor">👤 Kiran Babu</p>
+          <div class="card-meta">
+            <span class="card-price">₹1,199</span>
+            <span class="card-rating"><span class="stars">★★★★★</span> 4.9 (620)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="design">
+        <div class="card-thumb">🎨</div>
+        <div class="card-body">
+          <div class="card-category">Design</div>
+          <h3>UI/UX Design with Figma</h3>
+          <p class="card-instructor">👤 Meera Nair</p>
+          <div class="card-meta">
+            <span class="card-price">₹899</span>
+            <span class="card-rating"><span class="stars">★★★★☆</span> 4.6 (430)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="web">
+        <div class="card-thumb">⚛️</div>
+        <div class="card-body">
+          <div class="card-category">Web Development</div>
+          <h3>React.js — Zero to Pro</h3>
+          <p class="card-instructor">👤 Aditya Kumar</p>
+          <div class="card-meta">
+            <span class="card-price">₹1,099</span>
+            <span class="card-rating"><span class="stars">★★★★★</span> 4.8 (870)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="programming">
+        <div class="card-thumb">☕</div>
+        <div class="card-body">
+          <div class="card-category">Programming</div>
+          <h3>Java &amp; OOP Fundamentals</h3>
+          <p class="card-instructor">👤 Suresh Iyer</p>
+          <div class="card-meta">
+            <span class="card-price"><span class="free">FREE</span></span>
+            <span class="card-rating"><span class="stars">★★★★☆</span> 4.5 (2.1k)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="ai">
+        <div class="card-thumb">🧠</div>
+        <div class="card-body">
+          <div class="card-category">AI &amp; ML</div>
+          <h3>Deep Learning with TensorFlow</h3>
+          <p class="card-instructor">👤 Dr. Lakshmi Ravi</p>
+          <div class="card-meta">
+            <span class="card-price">₹1,799</span>
+            <span class="card-rating"><span class="stars">★★★★★</span> 4.9 (540)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-cat="data">
+        <div class="card-thumb">🗄️</div>
+        <div class="card-body">
+          <div class="card-category">Data Science</div>
+          <h3>SQL &amp; Database Design</h3>
+          <p class="card-instructor">👤 Vivek Patel</p>
+          <div class="card-meta">
+            <span class="card-price"><span class="free">FREE</span></span>
+            <span class="card-rating"><span class="stars">★★★★☆</span> 4.6 (1.5k)</span>
+          </div>
+          <a href="course-detail.html" class="btn btn-primary" style="width:100%;margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2 class="logo">SkillStack</h2>
+        <p>Your ultimate destination for mastering new skills.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SkillStack. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterCourses(cat) {
+      const cards = document.querySelectorAll('.course-card');
+      cards.forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+      });
+      document.querySelectorAll('[onclick]').forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-outline');
+      });
+      event.target.classList.remove('btn-outline');
+      event.target.classList.add('btn-primary');
+    }
+  </script>
+</body>
+</html>

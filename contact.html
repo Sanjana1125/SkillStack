@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - SkillStack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="icon"><h2 class="logo">SkillStack</h2></div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="page-banner">
+    <h1>Get in <span>Touch</span></h1>
+    <p>We'd love to hear from you. Reach out anytime.</p>
+  </div>
+
+  <section class="contact-section" style="padding-top:50px;">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h2>Contact <span>Information</span></h2>
+        <p>Have a question or want to collaborate? Drop us a message or reach us directly.</p>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <strong>Address</strong>
+            <span>42, Tech Park, Madhapur,<br>Hyderabad, Telangana — 500081</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📧</div>
+          <div class="info-text">
+            <strong>Email</strong>
+            <span>hello@skillstack.in</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <strong>Phone</strong>
+            <span>+91 98765 43210</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div class="info-text">
+            <strong>Support Hours</strong>
+            <span>Mon – Sat, 9:00 AM – 6:00 PM IST</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>Send us a Message</h3>
+        <div id="contactSuccess" style="display:none;background:rgba(76,175,80,0.1);border:1px solid #4caf50;border-radius:6px;padding:0.9rem 1rem;color:#4caf50;margin-bottom:1rem;font-size:0.9rem;">
+          ✅ Message sent successfully! We'll get back to you within 24 hours.
+        </div>
+        <div class="form-group">
+          <label for="cName">Full Name</label>
+          <input type="text" id="cName" placeholder="Your full name">
+          <span class="error-msg" id="cNameErr"></span>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Email Address</label>
+          <input type="email" id="cEmail" placeholder="you@email.com">
+          <span class="error-msg" id="cEmailErr"></span>
+        </div>
+        <div class="form-group">
+          <label for="cSubject">Subject</label>
+          <input type="text" id="cSubject" placeholder="How can we help?">
+          <span class="error-msg" id="cSubjectErr"></span>
+        </div>
+        <div class="form-group">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" placeholder="Write your message here..."></textarea>
+          <span class="error-msg" id="cMessageErr"></span>
+        </div>
+        <button class="btn btn-primary btn-full btn-lg" onclick="submitContact()">Send Message</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2 class="logo">SkillStack</h2>
+        <p>Your ultimate destination for mastering new skills.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SkillStack. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <script>
+    function submitContact() {
+      let valid = true;
+      const fields = [
+        { id: 'cName',    errId: 'cNameErr',    label: 'Name' },
+        { id: 'cEmail',   errId: 'cEmailErr',   label: 'Email' },
+        { id: 'cSubject', errId: 'cSubjectErr', label: 'Subject' },
+        { id: 'cMessage', errId: 'cMessageErr', label: 'Message' },
+      ];
+      fields.forEach(f => {
+        const el = document.getElementById(f.id);
+        const err = document.getElementById(f.errId);
+        if (!el.value.trim()) {
+          err.textContent = `${f.label} is required.`;
+          el.classList.add('error');
+          valid = false;
+        } else if (f.id === 'cEmail' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
+          err.textContent = 'Enter a valid email address.';
+          el.classList.add('error');
+          valid = false;
+        } else {
+          err.textContent = '';
+          el.classList.remove('error');
+          el.classList.add('success');
+        }
+      });
+      if (valid) {
+        document.getElementById('contactSuccess').style.display = 'block';
+        fields.forEach(f => {
+          document.getElementById(f.id).value = '';
+          document.getElementById(f.id).classList.remove('success');
+        });
+      }
+    }
+  </script>
+</body>
+</html>
